@@ -10,6 +10,7 @@ namespace HW5
     {
         static void Main(string[] args)
         {
+            Console.ReadKey();
         }
     }
 }
