@@ -19,10 +19,10 @@ namespace HW5
             developers.Add(new Programmer("C#"));
             developers.Add(new Programmer("C++"));
 
-            foreach(var d in developers)
+            foreach(var dev in developers)
             {
-                d.Create();
-                d.Destroy();
+                dev.Create();
+                dev.Destroy();
             }
             Console.WriteLine("\nPress any key to continue...");
             Console.ReadKey();
@@ -30,7 +30,7 @@ namespace HW5
             #region HW5 2)
             Dictionary<uint, string> persons = new Dictionary<uint, string>(7);
             Console.WriteLine("Please enter seven pairs (ID, Name) of some persons:");
-            for (int i=0; i<7; i++)
+            for (int i = 0; i < 7; i++)
             {
                 Console.WriteLine("Enter {0} ID:", i + 1);
                 uint ID=Convert.ToUInt32(Console.ReadLine());
