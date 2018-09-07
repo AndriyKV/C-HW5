@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace HW5
 {
-    class Program
+    interface IDeveloper
     {
-        static void Main(string[] args)
-        {
+        string Tool { get; set; }
 
-            Console.ReadKey();
-        }
+        void Create();
+        void Destroy();
     }
 }
