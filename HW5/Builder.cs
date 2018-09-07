@@ -8,12 +8,23 @@ namespace HW5
 {
     class Builder : IDeveloper
     {
-        public Builder(string t)
+        public Builder() { }
+        public Builder(string _tool)
         {
-            this.tool = t;
+            this.tool = _tool;
         }
         string tool;
-        public string Tool { get { return tool; } set { Tool = tool; } }
+        public string Tool
+        {
+            get
+            {
+                return tool;
+            }
+            set
+            {
+                Tool = tool;
+            }
+        }
         public void Create()
         {
             Console.WriteLine("Builder use {0}", Tool);

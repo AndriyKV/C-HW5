@@ -28,7 +28,7 @@ namespace HW5
             Console.ReadKey();
             #endregion
             #region HW5 2)
-            Dictionary<uint, string> newDictionari = new Dictionary<uint, string>(7);
+            Dictionary<uint, string> persons = new Dictionary<uint, string>(7);
             Console.WriteLine("Please enter seven pairs (ID, Name) of some persons:");
             for (int i=0; i<7; i++)
             {
@@ -36,13 +36,14 @@ namespace HW5
                 uint ID=Convert.ToUInt32(Console.ReadLine());
                 Console.WriteLine("Enter {0} Name:", i + 1);
                 string name = Console.ReadLine();
-                newDictionari.Add(ID, name);
+                persons.Add(ID, name);
             }
-            Console.WriteLine("------------------------\nEnter one of the ID you entered earlier.");
+            Console.WriteLine("------------------------\nEnter one of the IDs you entered earlier.");
             uint serchID = Convert.ToUInt32( Console.ReadLine());
-            if (newDictionari.ContainsKey(serchID))
+
+            if (persons.ContainsKey(serchID))
             {
-                Console.WriteLine(newDictionari[serchID]);
+                Console.WriteLine(persons[serchID]);
             }
             else
             {
