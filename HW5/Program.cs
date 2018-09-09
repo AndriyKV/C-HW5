@@ -11,7 +11,7 @@ namespace HW5
         static void Main(string[] args)
         {
             #region HW5 1)
-            List< IDeveloper > developers = new List<IDeveloper>();
+            List<IDeveloper> developers = new List<IDeveloper>();
             developers.Add(new Builder("hammer"));
             developers.Add(new Builder("ledgehammer"));
             developers.Add(new Builder("jackhammer"));
@@ -19,7 +19,7 @@ namespace HW5
             developers.Add(new Programmer("C#"));
             developers.Add(new Programmer("C++"));
 
-            foreach(var dev in developers)
+            foreach (var dev in developers)
             {
                 dev.Create();
                 dev.Destroy();
@@ -33,17 +33,17 @@ namespace HW5
             for (int i = 0; i < 7; i++)
             {
                 Console.WriteLine("Enter {0} ID:", i + 1);
-                uint ID=Convert.ToUInt32(Console.ReadLine());
+                uint ID = Convert.ToUInt32(Console.ReadLine());
                 Console.WriteLine("Enter {0} Name:", i + 1);
                 string name = Console.ReadLine();
                 persons.Add(ID, name);
             }
             Console.WriteLine("------------------------\nEnter one of the IDs you entered earlier.");
-            uint serchID = Convert.ToUInt32( Console.ReadLine());
+            uint searchID = Convert.ToUInt32(Console.ReadLine());
 
-            if (persons.ContainsKey(serchID))
+            if (persons.ContainsKey(searchID))
             {
-                Console.WriteLine(persons[serchID]);
+                Console.WriteLine(persons[searchID]);
             }
             else
             {
